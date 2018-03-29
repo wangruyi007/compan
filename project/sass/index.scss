@@ -1,0 +1,185 @@
+//浏览器重置样式
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, span, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,input,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+
+}
+html, body{
+  //line-height: 1;
+  font-size: 12px;
+}
+ol, ul {
+  list-style: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+q, blockquote {
+  quotes: none;
+}
+img{
+  border: none;
+}
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+  display: block;
+}
+i{
+  font-style: normal;
+}
+a{
+  color: #666;
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+    color: #35b5ff;
+  }
+}
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+#header{
+  width: 100%;
+  height: 60px;
+  background: url("/images/nav.png") #0e7ac9 no-repeat center center;
+  box-sizing: border-box;
+     .logo{
+       height: 60px;
+       display: inline-block;
+         .logo_pic{
+           width: 390px;
+           height: 60px;
+           margin: {
+             top: 4px;
+             left: 10px;
+           };
+           display: inline-block;
+           background: url("/images/header_logo.png") no-repeat left center;
+}        }
+     .logo_text{display: none;}
+     .nav{
+        color: white;
+        position: absolute;
+        right: 285px;
+        top: 20px;
+        z-index: 20;
+        margin: 0;
+        float: right;
+        ul{
+          li{
+            width: 115px;
+            font-size: 18px;
+            float: left;
+            list-style-type: none;
+            margin: 0;
+            position: relative;
+            padding: 0;
+            .caret{
+              border-top-color: white;
+              border-bottom-color: white;
+            }
+            .more{
+              width: 33px;
+              height: 22px;
+              fill: white;
+            }
+          }
+        }
+        a{
+          color: white;
+        }
+      }
+     .user_right{
+         float: right;
+         width: 24%;
+         margin-top: 14px;
+       .search{
+         position: relative;
+         width: 190px;
+         float: left;
+         /* position: absolute;
+          z-index: 25;
+          top: 10px;
+          right: 15px;*/
+         input{
+           width: 100%;
+           background-color: #14599f;
+           color: #d3dbe3;
+           border: 1px solid #0975bf;
+           border-radius: 20px;
+           padding-left: 15px;
+         }
+         .icon-search{
+           position: absolute;
+           z-index: 25;
+           right: -10px;
+           top: 20%;
+         }
+       }
+       .set{
+         float: right;
+         .set_one{
+            margin-top: 5px;
+          }
+         a{
+           img{
+             vertical-align:middle;
+           }
+         }
+         svg{
+           fill: white;
+           width: 33px;
+           height: 18px;
+         }
+         .set_pic{
+           margin: {
+             right: 20px;
+           };
+           img{
+             width: 36px;
+             height: 36px;
+             border-radius: 50%;
+           }
+         }
+       }
+      }
+    }
+#content{
+  background-color: red;
+}
+/*文本框颜色*/
+input::-webkit-input-placeholder { /* WebKit browsers */
+  color: #d3dbe3;
+}
+input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #d3dbe3;
+}
+input::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #d3dbe3;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #d3dbe3;
+}

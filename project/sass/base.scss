@@ -1,0 +1,225 @@
+@charset "UTF-8";
+//浏览器重置样式
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, span, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,input,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+
+}
+html, body{
+    //line-height: 1;
+    font-size: 12px;
+}
+ol, ul {
+    list-style: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+caption, th, td {
+    text-align: left;
+    font-weight: normal;
+    vertical-align: middle;
+}
+q, blockquote {
+    quotes: none;
+}
+img{
+    border: none;
+}
+article, aside, details, figcaption, figure, footer, header, main, menu, nav, section, summary {
+    display: block;
+}
+i{
+    font-style: normal;
+}
+a{
+    color: #666;
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+        color: #35b5ff;
+    }
+}
+
+/*清除浮动样式*/
+.clearfix{
+    &:before,&:after {
+         content:"";
+         display: table;
+     }
+    &:after {
+        clear:both;
+        overflow: hidden;
+    }
+}
+.content{
+  max-width: 900px;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 80px auto;
+  flex-direction: column;
+  .search{
+    width: 60%;
+    border: 1px solid #029be5;
+    border-radius: 3px;
+    display: inline-flex;
+    height: 100%;
+    margin: 34px 0;
+    overflow: hidden;
+    input{
+      height: 40px;
+      flex: 0 0 80%;
+    }
+    button{
+      color: white;
+      background-color: #029be5;
+      border: none;
+      outline:none;
+      flex: 0 0 20%;
+      cursor:pointer;
+    }
+  }
+  .news{
+    width: 50%;
+    .title{
+      position: relative;
+      color: #000;
+      font-size: 16px;
+      margin-bottom: 3em;
+      text-align: center;
+      font-weight: bold;
+      line-height: 1.1;
+      margin: {
+        top:66px;
+      };
+      &:before{
+        content: '';
+        position: absolute;
+        top: 52%;
+        left: 2px;
+        background: #d3dbe3;
+        width: 40%;
+        height: 1px;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        top: 52%;
+        right: 2px;
+        background: #d3dbe3;
+        width: 40%;
+        height: 1px;
+      }
+    }
+  }
+  .table{
+    width: 100%;
+    max-height:420px;
+    ul{
+      height:auto;
+      margin:{
+        top:20px;
+        left:15px;
+      }
+      border:{
+        top: 1px solid #d3dbe3;
+        left: 1px solid #d3dbe3;
+        right: 1px solid #d3dbe3;
+         }
+      .list-head{
+        display:flex;
+        height:30px;
+        background-color:#dee1e5;
+        align-items:center;
+        text-align: center;
+        span{
+          flex:1;
+          color:#7b8fa8;
+          font-size:12px;
+          margin:0 5px;
+          overflow:hidden;
+          text-overflow:ellipsis;
+          white-space:nowrap;
+          &:first-child{
+            flex:0 0 50px;
+          }
+          &:nth-of-type(2){
+            flex:0 0 28%;
+          }
+        }
+      }
+      .list-body{
+        width:100%;
+        max-height:420px;
+        overflow-x:hidden;
+        overflow-y:auto;
+        text-align: center;
+        a{
+          color: #029be5;
+        }
+        section{
+          display:flex;
+          height: 38px;
+          justify-content: center;
+          align-items: center;
+          border-bottom: 1px solid #d3dbe3;
+          p {
+            flex: 1;
+            color: #666;
+            font-size: 12px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin: 0 5px;
+            &:first-child {
+              flex: 0 0 50px;
+              span{
+                background-color: #cfd5de;
+                width: 18px;
+                line-height: 18px;
+                display: inline-block;
+              }
+            }
+            &:nth-of-type(2){
+              flex:0 0 28%;
+            }
+          }
+          &:nth-of-type(even){
+            background-color:#eef1f7;
+          }
+        }
+      }
+    }
+    .more{
+      float: right;
+      margin: {
+        top: 16px;
+      };
+      font:{
+        size: 14px;
+        weight: bold;
+      }
+      color: #35afea;
+    }
+  }
+}
